@@ -136,7 +136,7 @@ Official Account.
 
 ---
 
-## 六、執行方式
+## 七、執行方式
 
 ### Install and Run ngrok in Raspberry Pi
 - Sign up and log in to ngrok
