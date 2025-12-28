@@ -95,6 +95,21 @@ LINE_CHANNEL_SECRET=你的SECRET
 LINE_NOTIFY_USER_ID=你的USER_ID
 PORT=5000
 ```
+### Create a New Messaging API Channel
+• Login to LINE Developers Console.
+• https://developers.line.biz/en/
+• Create a new Provider in LINE Developers Console.
+• Create a new Messaging API channel in the Provider.
+• From August 14, 2024, you need to create Messaging API 
+channels by creating a LINE Official Account and then 
+enabling the use of the Messaging API in the LINE Official 
+Account Manager.
+• Create a new LINE Official Account.
+• Click "Settings" button at the upper right corner in your LINE 
+Official Account.
+• Click "Messaging API" in the left menu list in "Settings".
+• Click "Enable Messaging API" button.
+• Select your Provider.
 
 ---
 
