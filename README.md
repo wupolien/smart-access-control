@@ -138,8 +138,37 @@ Official Account.
 
 ## 六、執行方式
 
+### Install and Run ngrok in Raspberry Pi
+- Sign up and log in to ngrok
+- https://ngrok.com
+
+- Follow the steps in the Web page
+- Install ngrok
+```bash
+sudo snap install ngrok
+```
+- Add your authtoken
+```bash
+ngrok config add-authtoken XXXXXX
+```
+- Run ngrok at port 5000
 ```bash
 ngrok http 5000
+```
+### Enable Webhook in Line Developers Console
+- Go to the LINE Developers Console.
+- Click your Provider.
+- Click the Messaging API Channel in your Provider.
+- Click "Messaging API" tab.
+- Scroll down to find the "Webhook settings".
+- Copy and paste the ngrok URL + "/callback" in the "Webhook 
+URL".
+- https://XXXXXX.ngrok-free.dev/callback
+- Click "Verify", and then you will see "Success".
+- Enable "Use webhook".
+
+### Run the Python Program in Raspberry Pi
+```bash
 python app.py
 ```
 
