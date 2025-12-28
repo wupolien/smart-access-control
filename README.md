@@ -1,46 +1,44 @@
-# 智慧門禁系統  Smart Access Control System
-
-本專題為一套以樹莓派（Raspberry Pi）為核心之智慧門禁系統，整合 PIR 人體紅外線感測器、LCD 顯示模組、伺服馬達、LED 指示燈、蜂鳴器以及 LINE Messaging API，即時通訊機制。系統可於偵測到人員接近時自動啟動驗證流程，並透過 LINE 平台進行密碼驗證與即時通知。
+# Smart Access Control System
 
 This project presents a Raspberry Pi–based smart access control system integrating a PIR sensor, LCD display, servo motor, LEDs, buzzer, and the LINE Messaging API. The system automatically initiates authentication when human presence is detected and provides real-time feedback and notifications via LINE.
 
 ---
 
-## 一、系統功能  System Features
+## 1.System Features
 
-- PIR 人體感測器自動偵測人員靠近  / Automatic human detection using PIR sensor 
-- LCD 顯示提示訊息（Password Please）  / LCD displays system prompts  
-- 使用者可透過 LINE 輸入密碼進行驗證  / Password authentication via LINE Messaging API  
-- 驗證成功：伺服馬達開門、綠色 LED 亮起、LINE 通知  / Successful authentication triggers door opening and notification
-- 驗證失敗：紅色 LED 與蜂鳴器警示、LINE 通知  / Failed authentication triggers alarm and warning notification 
-
----
-
-## 二、系統架構  System Architecture
-
-本系統採用分層式架構設計，分為感測層、控制層與通訊層。/ The system architecture consists of three layers:
-
-- **感測層（Sensing Layer）**：PIR 人體紅外線感測器  / PIR motion sensor 
-- **控制層（Control Layer）**：Raspberry Pi（Python）  
-- **通訊層（Communication Layer）**：LINE Messaging API（Webhook + HTTP）  
+- Automatic human detection using PIR sensor 
+- LCD displays system prompts  
+- Password authentication via LINE Messaging API  
+- Successful authentication triggers door opening and notification
+- Failed authentication triggers alarm and warning notification 
 
 ---
 
-## 三、硬體需求  Hardware Requirements
+## 2.System Architecture
+
+The system architecture consists of three layers:
+
+- **Sensing Layer**：PIR motion sensor 
+- **Control Layer**：Raspberry Pi（Python）  
+- **Communication Layer**：LINE Messaging API（Webhook + HTTP）  
+
+---
+
+## 3.Hardware Requirements
 
 - Raspberry Pi  
-- PIR 人體紅外線感測器 (PIR Motion Sensor)  
-- LCD 1602 顯示模組（I2C）  
-- SG90 伺服馬達 (Servo Motor)  
-- LED（紅色 / 綠色）  
-- 蜂鳴器 (Buzzer)  
-- 外接 5V 電源（建議供給馬達）  
+- PIR Motion Sensor 
+- LCD 1602（I2C）  
+- SG90 Servo Motor 
+- LED（red / green）  
+- Buzzer
+- Use an external 5V power supply (recommended for powering the motor).  
 
 ---
 
-## 四、硬體接線說明  Hardware Wiring (GPIO Configuration)
+## 4.Hardware Wiring (GPIO Configuration)
 
-### GPIO 腳位對應表  GPIO Pin Mapping
+### GPIO Pin Mapping
 
 | Hardware Module | Function | GPIO Pin |
 |-----------------|----------|----------|
@@ -62,15 +60,15 @@ This project presents a Raspberry Pi–based smart access control system integra
 
 ---
 
-### 注意事項  Notes
+### Notes
 
-- 伺服馬達需使用外接電源，避免因電壓不足導致異常轉動。  / Use an external power supply for the servo motor.  
-- LED 必須串接限流電阻以保護 GPIO 腳位。  / LEDs must be connected with current-limiting resistors. 
-- 所有模組需共地（GND 共用）以確保訊號穩定。  / Ensure all modules share a common ground (GND).  
+- Use an external power supply for the servo motor.  
+- LEDs must be connected with current-limiting resistors. 
+- Ensure all modules share a common ground (GND).  
 
 ---
 
-## 五、軟體需求  Software Requirements
+## 5.Software Requirements
 
 - Python 3.9 or above  
 - smbus2
@@ -79,7 +77,7 @@ This project presents a Raspberry Pi–based smart access control system integra
 - python-dotenv  
 - line-bot-sdk  
 
-安裝套件 / Install dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -98,9 +96,9 @@ pip install -r requirements.txt
 
 ---
 
-## 六、環境設定 Environment settings
+## 6.Environment settings
 
-### 請建立 `.env` 檔案，內容如下：
+### Please create a `.env file` with the following content:
 
 ```env
 LINE_CHANNEL_ACCESS_TOKEN=你的TOKEN
@@ -149,7 +147,7 @@ Official Account.
 
 ---
 
-## 七、執行方式
+## 7.How to run
 
 ### Install and Run ngrok in Raspberry Pi
 - Sign up and log in to ngrok
@@ -185,4 +183,4 @@ URL".
 python app.py
 ```
 
-啟動後，系統將等待 PIR 偵測人員接近並透過 LINE 進行互動。
+After the system starts, it waits for the PIR sensor to detect human presence and then initiates interaction via LINE.
