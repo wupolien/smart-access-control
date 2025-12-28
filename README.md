@@ -4,7 +4,7 @@ This project presents a Raspberry Pi–based smart access control system integra
 
 ---
 
-## 1. System Features
+## 1. System Features 
 
 - Automatic human detection using PIR sensor 
 - LCD displays system prompts  
