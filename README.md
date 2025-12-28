@@ -101,9 +101,9 @@ pip install -r requirements.txt
 ### Please create a `.env file` with the following content:
 
 ```env
-LINE_CHANNEL_ACCESS_TOKEN=你的TOKEN
-LINE_CHANNEL_SECRET=你的SECRET
-LINE_NOTIFY_USER_ID=你的USER_ID
+LINE_CHANNEL_ACCESS_TOKEN=YOUR TOKEN
+LINE_CHANNEL_SECRET=YOUR SECRET
+LINE_NOTIFY_USER_ID=YOUR USER_ID
 PORT=5000
 ```
 ### Create a New Messaging API Channel
