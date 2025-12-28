@@ -100,7 +100,7 @@ PORT=5000
 ## 六、執行方式
 
 ```bash
-python app.py
+ngrok http 5000python app.py
 ```
 
 啟動後，系統將等待 PIR 偵測人員接近並透過 LINE 進行互動。
