@@ -73,6 +73,7 @@ This project presents a Raspberry Pi–based smart access control system integra
 ## 五、軟體需求  Software Requirements
 
 - Python 3.9 or above  
+- smbus2
 - Flask  
 - gpiozero  
 - python-dotenv  
@@ -83,11 +84,23 @@ This project presents a Raspberry Pi–based smart access control system integra
 ```bash
 pip install -r requirements.txt
 ```
+
+### Enable the I²C Interface
+
+- Execute sudo raspi-config.
+- Use the up/down keys and Enter to select 3 Interface Options.
+- Select I5 I2C.
+- When asked whether to enable I2C, use the left/right keys and 
+-nter to select <Yes>.
+- Press Enter on <OK>.
+- Use Tab, the left/right keys, and Enter to select <Finish> to exit raspi-config.
+- Reboot the Raspberry Pi.
+
 ---
 
 ## 六、環境設定 Environment settings
 
-請建立 `.env` 檔案，內容如下：
+### 請建立 `.env` 檔案，內容如下：
 
 ```env
 LINE_CHANNEL_ACCESS_TOKEN=你的TOKEN
