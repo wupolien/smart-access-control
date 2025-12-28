@@ -111,6 +111,29 @@ Official Account.
 - Click "Enable Messaging API" button.
 - Select your Provider.
 
+### Find Your Channel Access Token
+- Go to the LINE Developers Console.
+- Click your Provider.
+- Click the Messaging API Channel in your Provider.
+- Click "Messaging API" tab.
+- Scroll down to find the channel access token (long-lived).
+- Click "Issue" button to generate the channel access token.
+
+### Find Your Channel Secret
+- Go to the LINE Developers Console.
+- Click your Provider.
+- Click the Messaging API Channel in your Provider.
+- Click "Basic Settings" tab.
+- Scroll down to find your channel secret.
+
+### Find Your User ID
+- Go to the LINE Developers Console.
+- Click your Provider.
+- Click the Messaging API Channel in your Provider.
+- Click "Basic Settings" tab.
+- Scroll down to find your user ID.
+
+
 ---
 
 ## 六、執行方式
