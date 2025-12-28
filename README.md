@@ -26,7 +26,7 @@ The system architecture consists of three layers:
 
 ## 3. Hardware Requirements
 
-- Raspberry Pi  
+- Raspberry Pi 5  
 - PIR Motion Sensor 
 - LCD 1602（I2C）  
 - SG90 Servo Motor 
