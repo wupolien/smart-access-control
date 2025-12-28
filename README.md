@@ -87,13 +87,13 @@ pip install -r requirements.txt
 
 ### Enable the I²C Interface
 
-- Execute sudo raspi-config.
+- Execute `sudo raspi-config`.
 - Use the up/down keys and Enter to select 3 Interface Options.
 - Select I5 I2C.
 - When asked whether to enable I2C, use the left/right keys and 
--nter to select <Yes>.
-- Press Enter on <OK>.
-- Use Tab, the left/right keys, and Enter to select <Finish> to exit raspi-config.
+-nter to select `Yes`.
+- Press Enter on `OK`.
+- Use Tab, the left/right keys, and Enter to select `Finish` to exit raspi-config.
 - Reboot the Raspberry Pi.
 
 ---
