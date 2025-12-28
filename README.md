@@ -4,7 +4,7 @@ This project presents a Raspberry Pi–based smart access control system integra
 
 ---
 
-## 1.System Features
+## 1. System Features
 
 - Automatic human detection using PIR sensor 
 - LCD displays system prompts  
@@ -14,7 +14,7 @@ This project presents a Raspberry Pi–based smart access control system integra
 
 ---
 
-## 2.System Architecture
+## 2. System Architecture
 
 The system architecture consists of three layers:
 
@@ -24,7 +24,7 @@ The system architecture consists of three layers:
 
 ---
 
-## 3.Hardware Requirements
+## 3. Hardware Requirements
 
 - Raspberry Pi  
 - PIR Motion Sensor 
@@ -36,7 +36,7 @@ The system architecture consists of three layers:
 
 ---
 
-## 4.Hardware Wiring (GPIO Configuration)
+## 4. Hardware Wiring (GPIO Configuration)
 
 ### GPIO Pin Mapping
 
@@ -68,7 +68,7 @@ The system architecture consists of three layers:
 
 ---
 
-## 5.Software Requirements
+## 5. Software Requirements
 
 - Python 3.9 or above  
 - smbus2
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 ---
 
-## 6.Environment settings
+## 6. Environment settings
 
 ### Please create a `.env file` with the following content:
 
@@ -147,7 +147,7 @@ Official Account.
 
 ---
 
-## 7.How to run
+## 7. How to run
 
 ### Install and Run ngrok in Raspberry Pi
 - Sign up and log in to ngrok
